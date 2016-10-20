@@ -1,4 +1,4 @@
-Copyright (c) 2016 GitHub Inc., Ronnie Dutta
+Copyright (c) 2014 GitHub Inc., 2016 Ronnie Dutta
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
