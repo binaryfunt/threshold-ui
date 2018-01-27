@@ -1,7 +1,7 @@
 {
   "name": "threshold-ui",
   "theme": "ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Atom Threshold UI theme. Based on One Dark, enhanced for a more native Windows feel.",
   "keywords": [
     "dark",
