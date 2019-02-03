@@ -2,7 +2,7 @@
   "name": "threshold-ui",
   "theme": "ui",
   "version": "0.1.0",
-  "description": "Atom Threshold UI theme. Based on One Dark, enhanced for a more native Windows feel.",
+  "description": "Dark UI theme for Atom, with a more native Windows 10 feel.",
   "keywords": [
     "dark",
     "ui"
@@ -11,7 +11,7 @@
   "repository": "https://github.com/binaryfunt/threshold-ui",
   "main": "lib/main",
   "engines": {
-    "atom": ">0.40.0"
+    "atom": ">=1.13.0"
   },
   "devDependencies": {
     "coffeelint": "^1.9.7"
