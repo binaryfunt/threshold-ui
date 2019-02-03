@@ -8,7 +8,7 @@
 .tab-bar {
   height: @ui-tab-height;
   // box-shadow: inset 0 -1px 0 @tab-border-color;
-  // background: @tab-bar-background-color;
+  background: @tab-bar-background-color;
   overflow-x: auto;
   overflow-y: hidden;
   border-radius: 0;
@@ -294,4 +294,8 @@
       // background: #0063B1;
     }
   }
+}
+
+.tab-bar .tab[data-type="TreeView"] {
+  background: none;
 }
