@@ -17,12 +17,23 @@
     }
   }
 
+  // Selected state:
   .selected::before {
-    background: @background-color-highlight;
+    background: @background-color-selected;
   }
-  // :not(.active):hover::before {
-  //   background: @ui-bg-hover;
-  // }
+
+  // Focus + selected state:
+  &:focus {
+    .selected.list-item > .name, // files
+    .selected.list-nested-item > .list-item > .name, // folders
+    .selected.list-nested-item > .header:before { // arrow icon
+      color: contrast(@button-background-color-selected);
+    }
+    .selected:before {
+      background: darken(@button-background-color-selected, 15%);
+    }
+  }
+
 }
 
 .theme-one-dark-ui .tree-view .project-root.project-root::before {
@@ -36,11 +47,11 @@
   }
 }
 
-.tree-view-scroller {
-  border-width: 0 0 1px 0;
-  // border-image: linear-gradient(to right, @tree-view-background-color @component-padding, @base-border-color @component-padding * 5) 0 0 1 0 stretch;
-  // border-color: red;
-}
+// .tree-view-scroller {
+//   border-width: 0 0 1px 0;
+//   // border-image: linear-gradient(to right, @tree-view-background-color @component-padding, @base-border-color @component-padding * 5) 0 0 1 0 stretch;
+//   // border-color: red;
+// }
 
 // Variable height, based on ems
 .list-group li:not(.list-nested-item),
@@ -68,28 +79,43 @@
   }
 }
 
-// Active tree-view marker --------------
-
-.tree-view::before {
-  content: "";
-  position: fixed;
-  pointer-events: none;
-  z-index: 1;
-  margin-top: @ui-padding-pane;
-  margin-left: -@component-icon-padding;
-  height: @ui-tab-height;
-  width: 2px;
-  background: @base-accent-color;
-  opacity: 0;
-  transition: opacity .16s;
+// Arrow icon
+.list-group,
+.list-tree {
+  .header.header.header.header::before {
+    top: initial;
+    line-height: inherit;
+    height: inherit;
+    vertical-align: top;
+    font-size: inherit;
+  }
+}
+.tree-view .project-root-header.project-root-header.project-root-header.project-root-header::before {
+  line-height: @ui-tab-height;
 }
 
-.tree-view:focus::before {
-  opacity: 1;
-  transition-duration: .32s;
-}
-
-// .tree-view:hover::before {
+// // Active tree-view marker --------------
+//
+// .tree-view::before {
+//   content: "";
+//   position: fixed;
+//   pointer-events: none;
+//   z-index: 1;
+//   margin-top: @ui-padding-pane;
+//   margin-left: -@component-icon-padding;
+//   height: @ui-tab-height;
+//   width: 2px;
+//   background: @base-accent-color;
+//   opacity: 0;
+//   transition: opacity .16s;
+// }
+//
+// .tree-view:focus::before {
 //   opacity: 1;
 //   transition-duration: .32s;
+// }
+//
+// // .tree-view:hover::before {
+// //   opacity: 1;
+// //   transition-duration: .32s;
 // }
