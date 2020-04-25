@@ -1,5 +1,7 @@
 ## Threshold UI theme
 
+![APM](https://img.shields.io/apm/dm/threshold-ui)
+
 A dark UI theme, based on One Dark UI, enhanced for a more native feel on Windows.
 
 ![threshold-ui](https://raw.githubusercontent.com/binaryfunt/threshold-ui/master/screenshots/screenshot2.PNG)
